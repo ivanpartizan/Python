@@ -51,3 +51,46 @@ try:
 			print('Pay:', pay)
 except: 
 	print('Error, please enter numeric input')
+
+# 03 Functions
+
+# Rewrite your pay computation with time-and-a-half for overtime and create a function called computepay which takes two parameters (hours and rate).
+h = input('Enter Hours: ')
+r = input('Enter Rate: ')
+
+def computepay(hours, rate):
+	try:
+		float(hours)
+		float(rate)
+
+		if float(hours) > 40:
+				overtime = float(hours) - 40
+				pay = overtime * 1.5 * float(rate) + float(rate) * 40
+				# print('Pay:', pay)
+		else: 
+				pay = float(hours) * float(rate)
+				# print('Pay:', pay)
+		return pay
+	except: 
+		print('Error, please enter numeric input')
+
+payment = computepay(h, r)
+print("Payment:", payment)
+
+# 04 Iterations
+
+# Write a program which repeatedly reads numbers until the user enters “done”. Once “done” is entered, print out the total, count, and average of the numbers. If the user enters anything other than a number, detect their mistake using try and except and print an error message and skip to the next number.
+sum = 0
+count = 0
+while True:
+	number = input('Enter a number: ')
+	if number == 'done':
+		break
+	try: 
+		number = float(number)
+		sum = sum + number
+		count = count + 1
+	except:
+		print('Invalid input')
+	
+print('Sum:', sum, 'Count:', count, 'Average:', sum / count)
