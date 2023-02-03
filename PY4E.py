@@ -104,3 +104,12 @@ colon_position = str.find(':')
 number = float(str[colon_position + 1:])
 print(number)
 print(type(number))
+
+# 06 Files
+
+# Write a program to read through a file and print the contents of the file (line by line) all in upper case. 
+file = input('Enter a file name: ')
+text = open(file)
+for line in text:
+	line = line.rstrip().upper()
+	print(line)
