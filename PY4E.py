@@ -113,3 +113,26 @@ text = open(file)
 for line in text:
 	line = line.rstrip().upper()
 	print(line)
+
+# 08 Dictionaries
+
+# Write a program that categorizes each mail message by which day of the week the commit was done. To do this look for lines that start with “From”, then look for the third word and keep a running count of each of the days of the week. At the end of the program print out the contents of your dictionary (order does not matter).
+file = input('Enter a file name: ')
+handle = open(file)
+
+counts = {}
+days = list()
+
+for line in handle:
+	if not line.startswith('From'): 
+		continue
+	else:
+		words = line.split()
+		if len(words) > 2:
+			days.append(words[2])
+
+for day in days:
+	counts[day] = counts.get(day, 0) + 1
+
+print(days)
+print(counts)
