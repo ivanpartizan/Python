@@ -114,6 +114,26 @@ for line in text:
 	line = line.rstrip().upper()
 	print(line)
 
+# 07 Lists
+
+# Find all unique words in a file 
+# Shakespeare used over 20,000 words in his works. But how would you determine that? How would you produce the list of all the words that Shakespeare used? Would you download all his work, read it and track all unique words by hand? Let’s use Python to achieve that instead. List all unique words, sorted in alphabetical order, that are stored in a file romeo.txt containing a subset of Shakespeare’s work.
+file = input('Enter file: ')
+text = open(file)
+
+unique_words = list()
+
+for line in text:
+	words = line.split()
+	# print(words)
+	for word in words:
+		if word in unique_words:
+			continue
+		else:
+			unique_words.append(word)
+
+print(sorted(unique_words))
+
 # 08 Dictionaries
 
 # Write a program that categorizes each mail message by which day of the week the commit was done. To do this look for lines that start with “From”, then look for the third word and keep a running count of each of the days of the week. At the end of the program print out the contents of your dictionary (order does not matter).
