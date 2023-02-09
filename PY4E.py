@@ -156,3 +156,39 @@ for day in days:
 
 print(days)
 print(counts)
+
+# 09 Tuples
+
+# Revise a previous program as follows: Read and parse the “From” lines and pull out the addresses from the line. Count the number of messages from each person using a dictionary.
+# After all the data has been read, print the person with the most commits by creating a list of (count, email) tuples from the dictionary. Then sort the list in reverse order and print out the person who has the most commits.
+file = input('Enter a file name: ')
+handle = open(file)
+
+dict = {}
+emails = list()
+
+for line in handle:
+	if line.startswith('From '):
+		words = line.split()
+
+		if len(words) > 2:
+			emails.append(words[1])
+
+print(emails)
+
+for email in emails:
+	dict[email] = dict.get(email, 0) + 1
+
+print(dict)
+
+list = list()
+
+for k, v in dict.items():
+	tuple = (v, k)
+	list.append(tuple)
+
+list = sorted(list, reverse=True)
+print(list)
+
+for k, v in list[:1]:
+	print(v, k)
