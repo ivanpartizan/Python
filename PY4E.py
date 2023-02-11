@@ -134,6 +134,21 @@ for line in text:
 
 print(sorted(unique_words))
 
+# MBOX (mail box) is a popular file format to store and share a collection of emails. This was used by early email servers and desktop apps. Without getting into too many details, MBOX is a text file, which stores emails consecutively. Emails are separated by a special line which starts with From (notice the space). Importantly, lines starting with From: (notice the colon) describes the email itself and does not act as a separator. Imagine you wrote a minimalist email app, that lists the email of the senders in the user’s Inbox and counts the number of emails.
+file = input('Enter a file name: ')
+text = open(file)
+
+count = 0
+
+for line in text:
+	if line.startswith('From '):
+		# print(line)
+		words = line.split()
+		print(words[1])
+		count = count + 1
+
+print('There were', count, 'lines in the file with From as the first word')
+
 # 08 Dictionaries
 
 # Write a program that categorizes each mail message by which day of the week the commit was done. To do this look for lines that start with “From”, then look for the third word and keep a running count of each of the days of the week. At the end of the program print out the contents of your dictionary (order does not matter).
