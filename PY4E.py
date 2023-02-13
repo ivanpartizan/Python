@@ -149,6 +149,22 @@ for line in text:
 
 print('There were', count, 'lines in the file with From as the first word')
 
+# Rewrite the program that prompts the user for a list of numbers and prints out the maximum and minimum of the numbers at the end when the user enters “done”. Write the program to store the numbers the user enters in a list and use the max() and min() functions to compute the maximum and minimum numbers after the loop completes.
+numbers = list()
+
+while True:
+	number = input('Enter a number: ')
+	if number == 'done':
+		break
+	try:
+		number = float(number)
+		numbers.append(number)
+	except:
+		print('Invalid input')
+
+print('Maximum:', max(numbers))
+print('Minimum:', min(numbers))
+
 # 08 Dictionaries
 
 # Write a program that categorizes each mail message by which day of the week the commit was done. To do this look for lines that start with “From”, then look for the third word and keep a running count of each of the days of the week. At the end of the program print out the contents of your dictionary (order does not matter).
