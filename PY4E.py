@@ -206,6 +206,32 @@ for mail in mails:
 print(mails)
 print(dictionary)
 
+# Add code to the above program to figure out who has the most messages in the file. After all the data has been read and the dictionary has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages and print how many messages the person has.
+file = input('Enter a file name: ')
+handle = open(file)
+
+dictionary = {}
+mails = list()
+
+for line in handle:
+	if line.startswith('From '):
+		words = line.split()
+		mails.append(words[1])
+
+for mail in mails:
+	dictionary[mail] = dictionary.get(mail, 0) + 1
+
+max_mail = None
+max_number = 0
+
+for (mail, number) in dictionary.items():
+	print(mail, number)
+	if number > max_number:
+		max_number = number
+		max_mail = mail
+
+print(max_mail, max_number)
+
 # 09 Tuples
 
 # Revise a previous program as follows: Read and parse the “From” lines and pull out the addresses from the line. Count the number of messages from each person using a dictionary.
