@@ -188,6 +188,24 @@ for day in days:
 print(days)
 print(counts)
 
+# Write a program to read through a mail log, build a histogram using a dictionary to count how many messages have come from each email address, and print the dictionary.
+file = input('Enter file name: ')
+handle = open(file)
+
+dictionary = {}
+mails = list()
+
+for line in handle:
+	if line.startswith('From '):
+		words = line.split()
+		mails.append(words[1])
+
+for mail in mails:
+	dictionary[mail] = dictionary.get(mail, 0) + 1
+
+print(mails)
+print(dictionary)
+
 # 09 Tuples
 
 # Revise a previous program as follows: Read and parse the “From” lines and pull out the addresses from the line. Count the number of messages from each person using a dictionary.
