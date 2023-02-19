@@ -232,6 +232,28 @@ for (mail, number) in dictionary.items():
 
 print(max_mail, max_number)
 
+# This program records the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary.
+file = input('Enter a file name: ')
+handle = open(file)
+
+dict = {}
+domains = list()
+
+for line in handle:
+	if line.startswith('From '):
+		words = line.split()
+		mail = words[1]
+		split = mail.split('@')
+		domain = split[1]
+		domains.append(domain)
+
+print(domains)
+
+for domain in domains:
+	dict[domain] = dict.get(domain, 0) + 1
+
+print(dict)
+
 # 09 Tuples
 
 # Revise a previous program as follows: Read and parse the “From” lines and pull out the addresses from the line. Count the number of messages from each person using a dictionary.
