@@ -323,7 +323,6 @@ for time in list:
 	print(time[0], time[1])
 
 # Write a program that reads a file and prints the letters in decreasing order of frequency. Your program should convert all the input to lower case and only count the letters a-z. Your program should not count spaces, digits, punctuation, or anything other than the letters a-z. 
-import re
 file = input('Enter a file name: ')
 handle = open(file)
 
