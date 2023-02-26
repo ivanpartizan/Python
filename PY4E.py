@@ -341,3 +341,14 @@ for lower_letter in lower_letters:
 	dict[lower_letter] = dict.get(lower_letter, 0) + 1
 
 print(dict)
+
+list = list()
+
+for (k, v) in dict.items():
+	tuple = (v, k)
+	list.append(tuple)
+
+list = sorted(list, reverse=True)
+
+for letter in list:
+	print(letter[1], letter[0])
