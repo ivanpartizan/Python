@@ -25,3 +25,7 @@ def band_name_generator(name):
         return name[0].upper() + name[1:-1] + name
     else:
         return 'The ' + name[0].upper() + name[1:]
+
+# Greet Me 7kyu
+def greet(name): 
+    return 'Hello ' + name.capitalize() + '!'
