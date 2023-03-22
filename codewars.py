@@ -29,3 +29,13 @@ def band_name_generator(name):
 # Greet Me 7kyu
 def greet(name): 
     return 'Hello ' + name.capitalize() + '!'
+
+# Divide and Conquer 7kyu
+def div_con(x):
+    sum = 0
+    for char in x:
+    	if type(char) == int:
+    		sum += char
+    	else:
+    		sum -= int(char)
+    return sum
