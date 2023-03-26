@@ -39,3 +39,15 @@ def div_con(x):
     	else:
     		sum -= int(char)
     return sum
+
+# Speed Limit 7kyu
+def speed_limit(speed, signals):
+	sum = 0
+	for signal in signals:
+		if speed - signal >= 30:
+			sum += 500
+		elif speed - signal >= 20:
+			sum += 250
+		elif speed - signal >= 10:
+			sum += 100
+	return sum
