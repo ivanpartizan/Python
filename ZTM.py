@@ -33,3 +33,12 @@ for key, value in dict.items():
 		new_list.append(key)
 
 print(new_list)
+
+# Exercise: Highest even number in a list
+def highest_even(li):
+	highest = 0
+	for number in li:
+		if number % 2 == 0:
+			if number > highest:
+				highest = number
+	return highest
