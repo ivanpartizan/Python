@@ -96,3 +96,8 @@ joined = scores + my_numbers
 def accumulator(acc, item):
 	return acc + item
 print(reduce(accumulator, joined))
+
+# Exercise: Check for duplicates in a list with comprehension
+li = ['a', 'b', 'c', 'a', 'x', 'y', 'z', 'x']
+duplicates = list({char for char in li if li.count(char) > 1})
+print(duplicates) # ['a', 'x']
