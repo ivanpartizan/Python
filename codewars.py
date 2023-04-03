@@ -51,3 +51,9 @@ def speed_limit(speed, signals):
 		elif speed - signal >= 10:
 			sum += 100
 	return sum
+
+# Between Extremes 7kyu
+def between_extremes(numbers):
+    max_value = max(numbers)
+    min_value = min(numbers)
+    return max_value - min_value
