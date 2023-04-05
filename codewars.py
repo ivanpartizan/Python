@@ -40,17 +40,27 @@ def div_con(x):
     		sum -= int(char)
     return sum
 
+# Summing a number's digits 7kyu
+def sum_digits(number):
+    string = str(number)
+    array = []    
+    for digit in string:
+        if digit.isnumeric():
+            array.append(int(digit))
+    sum_of_digits = sum(array)
+    return sum_of_digits
+
 # Speed Limit 7kyu
 def speed_limit(speed, signals):
-	sum = 0
-	for signal in signals:
-		if speed - signal >= 30:
-			sum += 500
-		elif speed - signal >= 20:
-			sum += 250
-		elif speed - signal >= 10:
-			sum += 100
-	return sum
+    sum = 0
+    for signal in signals:
+        if speed - signal >= 30:
+	    sum += 500
+	elif speed - signal >= 20:
+	    sum += 250
+	elif speed - signal >= 10:
+	    sum += 100
+    return sum
 
 # Between Extremes 7kyu
 def between_extremes(numbers):
