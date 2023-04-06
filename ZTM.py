@@ -101,3 +101,24 @@ print(reduce(accumulator, joined))
 li = ['a', 'b', 'c', 'a', 'x', 'y', 'z', 'x']
 duplicates = list({char for char in li if li.count(char) > 1})
 print(duplicates) # ['a', 'x']
+
+# Exercise: Guessing Game
+import random
+
+random_number = random.randint(1, 100)
+
+while True:
+	try:
+		guess = input('Guess the number... ')
+
+		if int(guess) >= 1 and int(guess) <= 100:
+			if int(guess) == random_number:
+				print('Congrats, you are a genius!')
+				break
+			else:
+				print('Wrong number!')
+				continue
+		else:
+			print('Please, enter number between 1 and 100...')
+	except ValueError:
+		print('Please, enter a number')
