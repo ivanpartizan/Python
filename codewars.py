@@ -50,6 +50,18 @@ def sum_digits(number):
     sum_of_digits = sum(array)
     return sum_of_digits
 
+# Fix My Phone Numbers! 7kyu
+def is_it_a_num(str):
+	numbers = []
+	for char in str:
+		if char.isnumeric():
+			numbers.append(char)
+	if len(numbers) == 11 and numbers[0] == '0':
+		numbers = ''.join(numbers)
+		return numbers
+	else:
+		return 'Not a phone number'
+
 # Speed Limit 7kyu
 def speed_limit(speed, signals):
     sum = 0
