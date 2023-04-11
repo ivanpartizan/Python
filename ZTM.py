@@ -122,3 +122,18 @@ while True:
 			print('Please, enter number between 1 and 100...')
 	except ValueError:
 		print('Please, enter a number')
+
+# Exercise: Password Validation
+# at least 8 characters
+# contain letters, numbers, @#$%&
+import re
+
+regex = r"[a-zA-Z0-9@#$%&]{8,}"
+pattern = re.compile(regex)
+string = input('Please, enter your password: ')
+
+a = pattern.fullmatch(string)
+if a == None:
+	print('You can\'t choose this password!')
+else:
+	print('Success!')
