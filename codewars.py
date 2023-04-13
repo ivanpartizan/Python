@@ -79,3 +79,9 @@ def between_extremes(numbers):
     max_value = max(numbers)
     min_value = min(numbers)
     return max_value - min_value
+
+# Find the index of the second occurrence of a letter in a string 7kyu
+def second_symbol(s, symbol):
+    first = s.find(symbol)
+    second = s.find(symbol, first + 1)
+    return second
