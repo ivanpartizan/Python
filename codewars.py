@@ -85,3 +85,7 @@ def second_symbol(s, symbol):
     first = s.find(symbol)
     second = s.find(symbol, first + 1)
     return second
+
+# Third Angle of a Triangle 8kyu
+def other_angle(a, b):
+	return 180 - a - b
