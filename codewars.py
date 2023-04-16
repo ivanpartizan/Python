@@ -89,3 +89,7 @@ def second_symbol(s, symbol):
 # Third Angle of a Triangle 8kyu
 def other_angle(a, b):
 	return 180 - a - b
+
+# You Can't Code Under Pressure #1 8kyu
+def double_integer(i):
+	return i * 2
