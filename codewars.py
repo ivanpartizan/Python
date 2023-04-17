@@ -50,6 +50,14 @@ def sum_digits(number):
     sum_of_digits = sum(array)
     return sum_of_digits
 
+# Sum even numbers 7kyu
+def sum_even_numbers(seq): 
+	sum = 0
+	for num in seq:
+		if num % 2 == 0:
+			sum += num
+	return sum
+
 # Fix My Phone Numbers! 7kyu
 def is_it_a_num(str):
 	numbers = []
@@ -85,11 +93,3 @@ def second_symbol(s, symbol):
     first = s.find(symbol)
     second = s.find(symbol, first + 1)
     return second
-
-# Third Angle of a Triangle 8kyu
-def other_angle(a, b):
-	return 180 - a - b
-
-# You Can't Code Under Pressure #1 8kyu
-def double_integer(i):
-	return i * 2
