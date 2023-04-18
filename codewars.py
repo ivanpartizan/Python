@@ -30,6 +30,12 @@ def band_name_generator(name):
 def greet(name): 
     return 'Hello ' + name.capitalize() + '!'
 
+# Find the stray number 7kyu
+def stray(arr):
+	for num in arr:
+		if arr.count(num) == 1:
+			return num
+
 # Divide and Conquer 7kyu
 def div_con(x):
     sum = 0
