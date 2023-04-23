@@ -99,3 +99,20 @@ def second_symbol(s, symbol):
     first = s.find(symbol)
     second = s.find(symbol, first + 1)
     return second
+
+# The Office I - Outed 7kyu
+def outed(meet, boss):
+	score = 0
+	members = 0
+	for k, v in meet.items():
+		members += 1
+		if k == boss:
+			score += v * 2
+		else:
+			score += v
+	average = score / members
+
+	if average <= 5:
+		return 'Get Out Now!'
+	else:
+		return 'Nice Work Champ!'
