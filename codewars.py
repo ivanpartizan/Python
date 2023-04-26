@@ -116,3 +116,17 @@ def outed(meet, boss):
 		return 'Get Out Now!'
 	else:
 		return 'Nice Work Champ!'
+
+# Sum a list but ignore any duplicates 7kyu
+def sum_no_duplicates(l):
+	sum = 0
+	dictionary = {}
+
+	for number in l:
+		dictionary[number] = dictionary.get(number, 0) + 1
+
+	for key, value in dictionary.items():
+		if value == 1:
+			sum += key
+
+	return sum
