@@ -130,3 +130,32 @@ def sum_no_duplicates(l):
 			sum += key
 
 	return sum
+
+# Alphabet war 7kyu
+def alphabet_war(fight):
+	left_side = 0
+	right_side = 0
+	for letter in fight:
+		if letter == 'w':
+			left_side += 4
+		if letter == 'p':
+			left_side += 3
+		if letter == 'b':
+			left_side += 2
+		if letter == 's':
+			left_side += 1
+		if letter == 'm':
+			right_side += 4
+		if letter == 'q':
+			right_side += 3
+		if letter == 'd':
+			right_side += 2
+		if letter == 'z':
+			right_side += 1
+	if left_side > right_side:
+		return 'Left side wins!'
+	elif left_side < right_side:
+		return 'Right side wins!'
+	else:
+		return 'Let\'s fight again!'
+ 
