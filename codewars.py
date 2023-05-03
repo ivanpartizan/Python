@@ -30,6 +30,13 @@ def band_name_generator(name):
 def greet(name): 
     return 'Hello ' + name.capitalize() + '!'
 
+# The Feast of Many Beasts 8kyu
+def feast(beast, dish):
+	if beast[0] == dish[0] and beast[len(beast) - 1] == dish[len(dish) - 1]:
+		return True
+	else:
+		return False
+
 # Find the stray number 7kyu
 def stray(arr):
 	for num in arr:
