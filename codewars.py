@@ -37,6 +37,25 @@ def feast(beast, dish):
 	else:
 		return False
 
+# Compare 2 digit numbers 7kyu
+def compare(a, b):
+	percent = 0
+	first_number_digits = list(str(a))
+	second_number_digits = list(str(b))
+
+	if first_number_digits[0] == first_number_digits[1]:
+		if first_number_digits[0] == second_number_digits[0]:
+			percent += 50
+		if first_number_digits[0] == second_number_digits[1]:
+			percent += 50
+	if first_number_digits[0] != first_number_digits[1]:
+		if first_number_digits[0] == second_number_digits[0] or first_number_digits[0] == second_number_digits[1]:
+			percent += 50
+		if first_number_digits[1] == second_number_digits[0] or first_number_digits[1] == second_number_digits[1]:
+			percent += 50
+
+	return f'{percent}%'
+
 # Find the stray number 7kyu
 def stray(arr):
 	for num in arr:
